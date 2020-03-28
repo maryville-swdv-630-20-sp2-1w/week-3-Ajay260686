@@ -1,0 +1,24 @@
+1. What are the parent and child classes here?
+  Parent class: Spell
+  Child class of Spell: Accio, Confundo
+
+2. What are the base and sub-classes?
+  Base class: Spell
+  Sub-classes: Accio, Confundo
+
+3. What is the output from this code? Try without running if you can
+  Accio
+  Summoning Charm Accio
+  No description
+  Confundus Charm Confundo
+  Causes the victim to become confused and befuddled.
+
+4. When study_spell(Confundo()) executes...what get_description method gets called and why?
+  get_description method of Confundo class gets called because it's overridden in child class. Since we are passing child object, method of child class will be called if overridden otherwise parent class method will be called.
+
+5. The statement print Accio() needs to print ‘This charm summons an object to the caster, potentially over a significant distance’)? Write down the code that we need to add and/or change.
+
+  Need to add and override the getDescription method as follow:
+
+  def get_description(self):
+    return "This charm summons an object to the caster, potentially over a significant distance"
